@@ -1,6 +1,9 @@
 module Biomodelling
 
 using PoissonRandom
+using LsqFit
+using Random
+using ExcelReaders
 
 include("comp_g.jl")
 include("comp_hist_1d.jl")
@@ -12,7 +15,7 @@ include("HO_reaction.jl")
 include("Donne.jl")
 include("rates.jl")
 include("update_rates.jl")
-
+include("exponential_growth.jl")
 include("tauleap.jl")
 include("tauleapswitch.jl")
 include("ssa.jl")
@@ -28,6 +31,7 @@ export HO_reaction
 export Donne
 export rates
 export update_rates
+export exponential_growth
 export tauleap
 export tauleapswitch
 export ssa
